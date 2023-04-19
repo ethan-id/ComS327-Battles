@@ -18,4 +18,4 @@ Ethan Hancock, ehancock@iastate.edu
     - attackPlayer() is a method for the enemy pokemon to attack the player
         - Trainers always just attack every turn, they don't use items or do anything else, if their pokemon dies, the next is immediately put into battle
  - Refactored pokemonBattle() to force player to fight all of the trainers pokemon
- - Refactored some things in generateTrainers() for battling trainers# ComS327-Battles
+ - Refactored some things in generateTrainers() for battling trainers
