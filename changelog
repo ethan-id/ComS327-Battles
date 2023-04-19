@@ -1,0 +1,121 @@
+4/13/23
+    6:23pm-7:30pm
+        Made git repo, adjusted filename, makefile, changelog, and readme for new assignment
+        Enjoyed chicken club from potbelly :)
+        Refactored pokemon methods a bit, lots of unused terrainMap parameters for no reason.
+4/18/23
+    5:31am-7:58am
+        I have a procrastination problem, grind time again
+        Added battleSequence() to handle fights between the player and other pokemon
+        Added attackSequence() to handle when the player chooses to fight
+    8:00am-10:41am
+        Working on attackSequence()
+        Pokemon makes an attack now on encountered wild pokemon
+        To-Do
+            Implement accuracy/ability for attacks to miss
+            make enemy pokemon attack
+            Make trainer battles actually have the player fight all the trainers pokemon until they run out of health
+            Add bag functionality
+            Add pokemon switching functionality
+            Add Run logic
+            Add catching pokemon logic
+    10:45am-11:10am
+        Fights with wild pokemon now end with the 'capture' of the pokemon after defeating it or just defeating it if the player already has 6 pokemon.
+        To-Do
+            Implement accuracy/ability for attacks to miss
+            make enemy pokemon attack
+            Make trainer battles actually have the player fight all the trainers pokemon until they run out of health
+            Add bag functionality
+            Add pokemon switching functionality
+            Add Run logic
+            Add catching pokemon logic
+    11:10am-11:25am
+        Attacks can miss
+        Enemy pokemon now attack back
+            added attackPlayer()
+        To-Do
+            Add bag functionality
+            Add pokemon switching functionality
+            Add Run logic
+            Add catching pokemon logic
+            Make trainer battles actually have the player fight all the trainers pokemon until they run out of health
+    12:20pm-12:33pm
+        Made it so a player will not encounter pokemon and can't fight trainers if none of their pokemon have an hp value > 0
+        To-Do
+            Add bag functionality
+            Add pokemon switching functionality
+            Add Run logic
+            Add catching pokemon logic
+            Make trainer battles actually have the player fight all the trainers pokemon until they run out of health
+    12:35pm-3:28pm
+        Implemeted switching functionality and logic to catch pokemon until the player has 6.
+            All defeated pokemon are captured until the player has 6, then they are just defeated.
+        To-Do
+            Add bag functionality
+            Add Run logic
+            Refactor catching to be optional and use pokeballs
+            Make trainer battles actually have the player fight all the trainers pokemon until they run out of health
+    3:30pm-4:01pm
+        Added 'B' command to view inventory
+        Started adding bag functionality, potions are working, need to add revives and pokeballs catching logic
+        To-Do
+            Add revive and pokeball functionality
+            Add run logic
+            Refactor catching to be optional and use pokeballs
+            Make trainer battles actually have the player fight all the trainers pokemon until they run out of health
+    4:05pm-4:32pm
+        Added run logic
+        Refactored catching to be optional and use up pokeballs
+        To-Do
+            Add revive functionality
+            Make trainer battles actually have the player fight all the trainers pokemon until they run out of health
+            Make pokemarts restore supplies
+    4:35pm-5:00pm
+        Made pokemarts restore supplies
+        To-Do
+            Add revive functionality
+            Make trainer battles actually have the player fight all the trainers pokemon until they run out of health
+            Add ability to apply potions and revives outside of battle from inventory screen
+    5:00pm-5:51pm
+        Added revive functionality and fixed potion function
+        To-Do
+            Make trainer battles actually have the player fight all the trainers pokemon until they run out of health
+            Add ability to apply potions and revives outside of battle from inventory screen
+    5:51pm-7:35pm
+        Made trainer battles force player to fight all of the trainers pokemon until either all of their pokemon die or they defeat the trainer
+        Added ability to use items from the inventory screen.
+        Game is kinda fun now
+
+
+
+
+
+Battles with a wild Pokemon end with the capture of the wild Pokemon, with either the wild Pokemon or the trainer fleeing the battle, or with either the wild Pokemon or all of the trainer’s Pokemon getting knocked out.
+
+Trainer battles end when all of one trainer’s Pokemon are knocked out. Trainer battles cannot be fled, and Pokemon are not available for capture in trainer battles.
+
+A Pokemon is knocked out when it’s hitpoints fall to zero. 
+A knocked out Pokemon is unavailable for battle until it is revived.
+
+
+During battle, the PC has the following options, which should all be implemented in the battle place-
+holder(s) that were added last week:
+1. Fight - The active Pokemon uses one of its moves; player chooses the move if PC, otherwise the AI
+chooses (see below).
+2. Bag - Use an item from the trainer’s inventory. We will implement revives, potions, and Pok ́eballs
+(more below)
+3. Run - Attempt to flee the battle
+4. Pokemon - Switch to a different active Pokemon. A trainer may have up to 6 active Pokemon.
+
+
+The bag mechanic consumes an item from the trainer’s inventory. The trainer must be carrying the item
+in order to use it. A revive will revive a knocked-out Pokemon and restore it to half its max HP. A potion will restore up to 20 HP, never taking the Pokemon above its max HP value. Pokeballs may only be used in battles with wild Pokemon and will attempt to capture them.
+
+
+Start the PC with a small number of potions, revives, and Pok ́eballs.
+
+
+Visiting a Pokemon Center shouldrestore and fully heal all of the PC’s Pokemon. Visiting a Pok ́eMart should restore the PC’s supplies (im-
+plement a shopping mechanic if you would like, but all you need to do is restore the PC’s supplies to the
+default numbers they started with). Implement the ’B’ command that will allow the PC to access the bag
+outside of battle and apply restores and heals to party Pokemon.
